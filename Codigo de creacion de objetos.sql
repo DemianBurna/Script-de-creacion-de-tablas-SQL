@@ -150,26 +150,4 @@ CREATE TABLE `Ventas` (
   FOREIGN KEY (`id_proyecto`) REFERENCES `Hoja_de_Proyecto`(`id_proyecto`)
 );
 
-CREATE VIEW users_view AS 
-	select 
-		e.nombre_emp AS nombre
-        ,e.apellido_emp AS apellido
-        ,u.email AS email
-        ,u.contraseña AS contraseña 
-	FROM 
-		empleados AS e 
-        inner join 
-        usuarios AS u 
-			ON e.id_user=u.id_usuarios;
-            
-CREATE VIEW users_cargo AS 
-	select 
-		e.nombre_emp AS nombre
-        ,e.apellido_emp AS apellido
-        ,c.cargo AS cargo
-        ,c.salario AS salario 
-	FROM 
-		empleados AS e 
-        inner join 
-        cargos AS c 
-			ON e.id_cargo=c.id_cargo;
+
